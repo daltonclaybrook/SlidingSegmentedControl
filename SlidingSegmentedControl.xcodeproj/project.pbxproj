@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE6EA23419881BD700D6D809 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6EA23319881BD700D6D809 /* Foundation.framework */; };
+		BE6EA23619881BD700D6D809 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6EA23519881BD700D6D809 /* CoreGraphics.framework */; };
+		BE6EA23819881BD800D6D809 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6EA23719881BD800D6D809 /* UIKit.framework */; };
+		BE6EA23E19881BD800D6D809 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE6EA23C19881BD800D6D809 /* InfoPlist.strings */; };
+		BE6EA24019881BD800D6D809 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6EA23F19881BD800D6D809 /* main.m */; };
+		BE6EA24419881BD800D6D809 /* SFSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6EA24319881BD800D6D809 /* SFSAppDelegate.m */; };
+		BE6EA24719881BD800D6D809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6EA24519881BD800D6D809 /* Main.storyboard */; };
+		BE6EA24A19881BD800D6D809 /* SFSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6EA24919881BD800D6D809 /* SFSViewController.m */; };
+		BE6EA24C19881BD800D6D809 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE6EA24B19881BD800D6D809 /* Images.xcassets */; };
+		BE6EA25319881BD800D6D809 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6EA25219881BD800D6D809 /* XCTest.framework */; };
+		BE6EA25419881BD800D6D809 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6EA23319881BD700D6D809 /* Foundation.framework */; };
+		BE6EA25519881BD800D6D809 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6EA23719881BD800D6D809 /* UIKit.framework */; };
+		BE6EA25D19881BD800D6D809 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE6EA25B19881BD800D6D809 /* InfoPlist.strings */; };
+		BE6EA25F19881BD800D6D809 /* SlidingSegmentedControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6EA25E19881BD800D6D809 /* SlidingSegmentedControlTests.m */; };
+		BE6EA26A19881BFC00D6D809 /* SFSSlidingSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6EA26919881BFC00D6D809 /* SFSSlidingSegmentedControl.m */; };
+		BE6EA26E19881C3800D6D809 /* UIView+AutolayoutExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6EA26D19881C3800D6D809 /* UIView+AutolayoutExtensions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE6EA25619881BD800D6D809 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE6EA22819881BD700D6D809 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE6EA22F19881BD700D6D809;
+			remoteInfo = SlidingSegmentedControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BE6EA23019881BD700D6D809 /* SlidingSegmentedControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlidingSegmentedControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE6EA23319881BD700D6D809 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BE6EA23519881BD700D6D809 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BE6EA23719881BD800D6D809 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BE6EA23B19881BD800D6D809 /* SlidingSegmentedControl-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SlidingSegmentedControl-Info.plist"; sourceTree = "<group>"; };
+		BE6EA23D19881BD800D6D809 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BE6EA23F19881BD800D6D809 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BE6EA24119881BD800D6D809 /* SlidingSegmentedControl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SlidingSegmentedControl-Prefix.pch"; sourceTree = "<group>"; };
+		BE6EA24219881BD800D6D809 /* SFSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFSAppDelegate.h; sourceTree = "<group>"; };
+		BE6EA24319881BD800D6D809 /* SFSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFSAppDelegate.m; sourceTree = "<group>"; };
+		BE6EA24619881BD800D6D809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE6EA24819881BD800D6D809 /* SFSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFSViewController.h; sourceTree = "<group>"; };
+		BE6EA24919881BD800D6D809 /* SFSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFSViewController.m; sourceTree = "<group>"; };
+		BE6EA24B19881BD800D6D809 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BE6EA25119881BD800D6D809 /* SlidingSegmentedControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlidingSegmentedControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE6EA25219881BD800D6D809 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BE6EA25A19881BD800D6D809 /* SlidingSegmentedControlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SlidingSegmentedControlTests-Info.plist"; sourceTree = "<group>"; };
+		BE6EA25C19881BD800D6D809 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BE6EA25E19881BD800D6D809 /* SlidingSegmentedControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlidingSegmentedControlTests.m; sourceTree = "<group>"; };
+		BE6EA26819881BFC00D6D809 /* SFSSlidingSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSSlidingSegmentedControl.h; sourceTree = "<group>"; };
+		BE6EA26919881BFC00D6D809 /* SFSSlidingSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSSlidingSegmentedControl.m; sourceTree = "<group>"; };
+		BE6EA26C19881C3800D6D809 /* UIView+AutolayoutExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutolayoutExtensions.h"; sourceTree = "<group>"; };
+		BE6EA26D19881C3800D6D809 /* UIView+AutolayoutExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutolayoutExtensions.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE6EA22D19881BD700D6D809 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE6EA23619881BD700D6D809 /* CoreGraphics.framework in Frameworks */,
+				BE6EA23819881BD800D6D809 /* UIKit.framework in Frameworks */,
+				BE6EA23419881BD700D6D809 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE6EA24E19881BD800D6D809 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE6EA25319881BD800D6D809 /* XCTest.framework in Frameworks */,
+				BE6EA25519881BD800D6D809 /* UIKit.framework in Frameworks */,
+				BE6EA25419881BD800D6D809 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE6EA22719881BD700D6D809 = {
+			isa = PBXGroup;
+			children = (
+				BE6EA23919881BD800D6D809 /* SlidingSegmentedControl */,
+				BE6EA25819881BD800D6D809 /* SlidingSegmentedControlTests */,
+				BE6EA23219881BD700D6D809 /* Frameworks */,
+				BE6EA23119881BD700D6D809 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE6EA23119881BD700D6D809 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE6EA23019881BD700D6D809 /* SlidingSegmentedControl.app */,
+				BE6EA25119881BD800D6D809 /* SlidingSegmentedControlTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE6EA23219881BD700D6D809 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE6EA23319881BD700D6D809 /* Foundation.framework */,
+				BE6EA23519881BD700D6D809 /* CoreGraphics.framework */,
+				BE6EA23719881BD800D6D809 /* UIKit.framework */,
+				BE6EA25219881BD800D6D809 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE6EA23919881BD800D6D809 /* SlidingSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				BE6EA26B19881C2A00D6D809 /* Categories */,
+				BE6EA24219881BD800D6D809 /* SFSAppDelegate.h */,
+				BE6EA24319881BD800D6D809 /* SFSAppDelegate.m */,
+				BE6EA24519881BD800D6D809 /* Main.storyboard */,
+				BE6EA24819881BD800D6D809 /* SFSViewController.h */,
+				BE6EA24919881BD800D6D809 /* SFSViewController.m */,
+				BE6EA26819881BFC00D6D809 /* SFSSlidingSegmentedControl.h */,
+				BE6EA26919881BFC00D6D809 /* SFSSlidingSegmentedControl.m */,
+				BE6EA24B19881BD800D6D809 /* Images.xcassets */,
+				BE6EA23A19881BD800D6D809 /* Supporting Files */,
+			);
+			path = SlidingSegmentedControl;
+			sourceTree = "<group>";
+		};
+		BE6EA23A19881BD800D6D809 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE6EA23B19881BD800D6D809 /* SlidingSegmentedControl-Info.plist */,
+				BE6EA23C19881BD800D6D809 /* InfoPlist.strings */,
+				BE6EA23F19881BD800D6D809 /* main.m */,
+				BE6EA24119881BD800D6D809 /* SlidingSegmentedControl-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE6EA25819881BD800D6D809 /* SlidingSegmentedControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE6EA25E19881BD800D6D809 /* SlidingSegmentedControlTests.m */,
+				BE6EA25919881BD800D6D809 /* Supporting Files */,
+			);
+			path = SlidingSegmentedControlTests;
+			sourceTree = "<group>";
+		};
+		BE6EA25919881BD800D6D809 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE6EA25A19881BD800D6D809 /* SlidingSegmentedControlTests-Info.plist */,
+				BE6EA25B19881BD800D6D809 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE6EA26B19881C2A00D6D809 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				BE6EA26C19881C3800D6D809 /* UIView+AutolayoutExtensions.h */,
+				BE6EA26D19881C3800D6D809 /* UIView+AutolayoutExtensions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE6EA22F19881BD700D6D809 /* SlidingSegmentedControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE6EA26219881BD800D6D809 /* Build configuration list for PBXNativeTarget "SlidingSegmentedControl" */;
+			buildPhases = (
+				BE6EA22C19881BD700D6D809 /* Sources */,
+				BE6EA22D19881BD700D6D809 /* Frameworks */,
+				BE6EA22E19881BD700D6D809 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlidingSegmentedControl;
+			productName = SlidingSegmentedControl;
+			productReference = BE6EA23019881BD700D6D809 /* SlidingSegmentedControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE6EA25019881BD800D6D809 /* SlidingSegmentedControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE6EA26519881BD800D6D809 /* Build configuration list for PBXNativeTarget "SlidingSegmentedControlTests" */;
+			buildPhases = (
+				BE6EA24D19881BD800D6D809 /* Sources */,
+				BE6EA24E19881BD800D6D809 /* Frameworks */,
+				BE6EA24F19881BD800D6D809 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE6EA25719881BD800D6D809 /* PBXTargetDependency */,
+			);
+			name = SlidingSegmentedControlTests;
+			productName = SlidingSegmentedControlTests;
+			productReference = BE6EA25119881BD800D6D809 /* SlidingSegmentedControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE6EA22819881BD700D6D809 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SFS;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Space Factory Studios";
+				TargetAttributes = {
+					BE6EA25019881BD800D6D809 = {
+						TestTargetID = BE6EA22F19881BD700D6D809;
+					};
+				};
+			};
+			buildConfigurationList = BE6EA22B19881BD700D6D809 /* Build configuration list for PBXProject "SlidingSegmentedControl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE6EA22719881BD700D6D809;
+			productRefGroup = BE6EA23119881BD700D6D809 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE6EA22F19881BD700D6D809 /* SlidingSegmentedControl */,
+				BE6EA25019881BD800D6D809 /* SlidingSegmentedControlTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE6EA22E19881BD700D6D809 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE6EA24C19881BD800D6D809 /* Images.xcassets in Resources */,
+				BE6EA23E19881BD800D6D809 /* InfoPlist.strings in Resources */,
+				BE6EA24719881BD800D6D809 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE6EA24F19881BD800D6D809 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE6EA25D19881BD800D6D809 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE6EA22C19881BD700D6D809 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE6EA24019881BD800D6D809 /* main.m in Sources */,
+				BE6EA24419881BD800D6D809 /* SFSAppDelegate.m in Sources */,
+				BE6EA24A19881BD800D6D809 /* SFSViewController.m in Sources */,
+				BE6EA26A19881BFC00D6D809 /* SFSSlidingSegmentedControl.m in Sources */,
+				BE6EA26E19881C3800D6D809 /* UIView+AutolayoutExtensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE6EA24D19881BD800D6D809 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE6EA25F19881BD800D6D809 /* SlidingSegmentedControlTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE6EA25719881BD800D6D809 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE6EA22F19881BD700D6D809 /* SlidingSegmentedControl */;
+			targetProxy = BE6EA25619881BD800D6D809 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BE6EA23C19881BD800D6D809 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE6EA23D19881BD800D6D809 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BE6EA24519881BD800D6D809 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE6EA24619881BD800D6D809 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BE6EA25B19881BD800D6D809 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE6EA25C19881BD800D6D809 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE6EA26019881BD800D6D809 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BE6EA26119881BD800D6D809 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE6EA26319881BD800D6D809 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SlidingSegmentedControl/SlidingSegmentedControl-Prefix.pch";
+				INFOPLIST_FILE = "SlidingSegmentedControl/SlidingSegmentedControl-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BE6EA26419881BD800D6D809 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SlidingSegmentedControl/SlidingSegmentedControl-Prefix.pch";
+				INFOPLIST_FILE = "SlidingSegmentedControl/SlidingSegmentedControl-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BE6EA26619881BD800D6D809 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SlidingSegmentedControl.app/SlidingSegmentedControl";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SlidingSegmentedControl/SlidingSegmentedControl-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SlidingSegmentedControlTests/SlidingSegmentedControlTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BE6EA26719881BD800D6D809 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SlidingSegmentedControl.app/SlidingSegmentedControl";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SlidingSegmentedControl/SlidingSegmentedControl-Prefix.pch";
+				INFOPLIST_FILE = "SlidingSegmentedControlTests/SlidingSegmentedControlTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE6EA22B19881BD700D6D809 /* Build configuration list for PBXProject "SlidingSegmentedControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE6EA26019881BD800D6D809 /* Debug */,
+				BE6EA26119881BD800D6D809 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE6EA26219881BD800D6D809 /* Build configuration list for PBXNativeTarget "SlidingSegmentedControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE6EA26319881BD800D6D809 /* Debug */,
+				BE6EA26419881BD800D6D809 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BE6EA26519881BD800D6D809 /* Build configuration list for PBXNativeTarget "SlidingSegmentedControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE6EA26619881BD800D6D809 /* Debug */,
+				BE6EA26719881BD800D6D809 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE6EA22819881BD700D6D809 /* Project object */;
+}
