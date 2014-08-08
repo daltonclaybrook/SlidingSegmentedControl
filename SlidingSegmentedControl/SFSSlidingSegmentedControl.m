@@ -126,15 +126,21 @@ static CGFloat const kAnimationDuration = 0.4f;
 
 #pragma mark - Accessors
 
-- (void)setSelectedIndex:(NSUInteger)selectedIndex
+- (void)setSelectedIndex:(CGFloat)selectedIndex
 {
-    if (_selectedIndex == selectedIndex)
+    CGFloat adjustedIndex = MAX(MIN(selectedIndex, self.titles.count-1), 0.0f);
+    if (fabsf(_selectedIndex - adjustedIndex) < FLT_EPSILON)
     {
         return;
     }
-    _selectedIndex = selectedIndex;
+    _selectedIndex = adjustedIndex;
     
     [self setNeedsLayout];
+}
+
+- (NSUInteger)roundedSelectedIndex
+{
+    return roundf(self.selectedIndex);
 }
 
 - (void)setTitles:(NSArray *)titles
@@ -255,7 +261,7 @@ static CGFloat const kAnimationDuration = 0.4f;
             NSUInteger index = [self.foregroundLabels indexOfObject:self.currentlyTappingForegroundLabel];
             if (index != NSNotFound && index != self.selectedIndex)
             {
-                self.selectedIndex = index;
+                _selectedIndex = (CGFloat)index;
                 [self updateMaskForSelectedIndexAnimated:YES];
                 
                 [self sendActionsForControlEvents:UIControlEventValueChanged];
@@ -353,41 +359,36 @@ static CGFloat const kAnimationDuration = 0.4f;
 
 - (void)updateMaskForSelectedIndexAnimated:(BOOL)animated
 {
-    if (self.titles.count)
-    {
-        __block CGFloat labelOrigin = kOuterPadding;
-        __block CGFloat labelWidth = 0.0f;
-        
-        [self.foregroundLabels enumerateObjectsUsingBlock:^(UILabel *label, NSUInteger idx, BOOL *stop) {
-            
-            if (idx == self.selectedIndex)
-            {
-                labelWidth = CGRectGetWidth(label.frame);
-                *stop = YES;
-            }
-            else
-            {
-                labelOrigin += CGRectGetWidth(label.frame);
-                labelOrigin += self.titleSpacing;
-            }
-        }];
-        
-        CGRect newLabelRect = CGRectMake(labelOrigin, 0.0, labelWidth, CGRectGetHeight(self.foregroundContainer.frame));
-        CGRect oldLabelRect = self.labelMask.frame;
-        self.labelMask.frame = newLabelRect;
-        
-        if (animated)
-        {
-            [self animateLabelMaskFromFrame:oldLabelRect toFrame:newLabelRect];
-        }
-    }
-    else
+    if (!self.titles.count)
     {
         self.labelMask.frame = CGRectZero;
+        return;
     }
-    CGFloat width = -self.titleSpacing;
     
-    width = MAX(0, width);
+    NSUInteger bottomIndex = (NSUInteger)floorf(self.selectedIndex);
+    NSUInteger topIndex = (NSUInteger)ceilf(self.selectedIndex);
+    
+    UILabel *bottomLabel = self.foregroundLabels[bottomIndex];
+    UILabel *topLabel = self.foregroundLabels[topIndex];
+    CGFloat interpolation = self.selectedIndex - (CGFloat)bottomIndex;
+    
+    CGFloat widthDifference = CGRectGetWidth(topLabel.frame) - CGRectGetWidth(bottomLabel.frame);
+    widthDifference *= interpolation;
+    CGFloat maskWidth = CGRectGetWidth(bottomLabel.frame) + widthDifference;
+    
+    CGFloat originDifference = CGRectGetMinX(topLabel.frame) - CGRectGetMinX(bottomLabel.frame);
+    originDifference *= interpolation;
+    CGFloat maskXOrigin = CGRectGetMinX(bottomLabel.frame) + originDifference;
+    
+    CGFloat maskHeight = CGRectGetHeight(self.foregroundContainer.frame);
+    CGRect oldLabelRect = self.labelMask.frame;
+    CGRect newLabelRect = CGRectMake(maskXOrigin, 0.0, maskWidth, maskHeight);
+    self.labelMask.frame = newLabelRect;
+    
+    if (animated)
+    {
+        [self animateLabelMaskFromFrame:oldLabelRect toFrame:newLabelRect];
+    }
 }
 
 - (void)animateLabelMaskFromFrame:(CGRect)fromFrame toFrame:(CGRect)toFrame

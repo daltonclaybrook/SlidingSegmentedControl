@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "SFSSlidingSegmentedControl.h"
 
-@interface SFSViewController : UIViewController
+@interface SFSViewController : UIViewController <UIScrollViewDelegate>
 
 @property (nonatomic, weak) IBOutlet SFSSlidingSegmentedControl *segmentedControl;
+@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 
 - (IBAction)segmentedControlValueChanged:(id)sender;
 

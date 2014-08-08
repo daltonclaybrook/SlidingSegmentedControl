@@ -21,7 +21,8 @@
 @property (nonatomic, strong) UIColor *highlightedSelectedColor;
 @property (nonatomic, strong) UIColor *highlightedUnselectedColor;
 
-@property (nonatomic, assign) NSUInteger selectedIndex;
+@property (nonatomic, assign) CGFloat selectedIndex;
+@property (nonatomic, assign, readonly) NSUInteger roundedSelectedIndex;
 
 // Initialziers
 - (instancetype)initWithTitles:(NSArray *)titles;

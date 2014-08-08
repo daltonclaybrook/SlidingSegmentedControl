@@ -20,16 +20,25 @@
 {
     [super viewDidLoad];
 	
-    self.segmentedControl.titles = @[@"These", @"Are", @"Options"];
+    self.segmentedControl.titles = @[@"Two", @"Pages"];
 }
 
 #pragma mark - Actions;
 
 - (IBAction)segmentedControlValueChanged:(id)sender
 {
-    NSString *selectedTitle = self.segmentedControl.titles[self.segmentedControl.selectedIndex];
+    CGPoint offset = CGPointMake(self.segmentedControl.roundedSelectedIndex * CGRectGetWidth(self.scrollView.frame), 0.0f);
     
-    NSLog(@"title selected: %@", selectedTitle);
+    [self.scrollView setContentOffset:offset animated:YES];
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat currentPage = scrollView.contentOffset.x / CGRectGetWidth(scrollView.frame);
+    
+    self.segmentedControl.selectedIndex = currentPage;
 }
 
 @end
